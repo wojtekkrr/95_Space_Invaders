@@ -1,8 +1,5 @@
 from turtle import Turtle
-from colors import COLORS, COLORS_BOXES
-
-
-
+from colors import COLORS
 
 
 class EnemyLaser(Turtle):
@@ -24,13 +21,11 @@ class EnemyLaser(Turtle):
         self.goto(self.xcor(), new_y)
 
     # Przeniesienie lasera w kierunku obiektu alien
-    def shoot_alien(self, x_cordinate, y_cordinate):
-        self.goto(x_cordinate, y_cordinate)
+    def shoot_alien(self, x_coordinate, y_coordinate):
+        self.goto(x_coordinate, y_coordinate)
         self.flying = True
 
     # Usunięcie pocisku
     def delete_laser_alien(self):
         self.goto(10000, -340)
         self.flying = False
-
-

@@ -1,5 +1,6 @@
 from alien import Turtle
-from colors import COLORS, COLORS_BOXES
+from colors import COLORS
+
 
 class Paddle(Turtle):
 
@@ -12,7 +13,6 @@ class Paddle(Turtle):
         self.goto(position)
         self.setheading(90)
 
-
     def go_left(self):
         new_x = self.xcor() - 20
         self.goto(new_x, self.ycor())
@@ -20,6 +20,3 @@ class Paddle(Turtle):
     def go_right(self):
         new_x = self.xcor() + 20
         self.goto(new_x, self.ycor())
-
-
-

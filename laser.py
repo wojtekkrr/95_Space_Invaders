@@ -1,7 +1,5 @@
 from turtle import Turtle
-from colors import COLORS, COLORS_BOXES
-
-
+from colors import COLORS
 
 
 class Laser(Turtle):
@@ -23,14 +21,12 @@ class Laser(Turtle):
         self.goto(self.xcor(), new_y)
 
     # Przeniesienie lasera w kierunku statku
-    def shoot(self, x_cordinate):
+    def shoot(self, x_coordinate):
         if not self.flying:
-            self.goto(x_cordinate, -340)
+            self.goto(x_coordinate, -340)
             self.flying = True
 
     # Usunięcie pocisku
     def delete_laser(self):
         self.goto(10000, -340)
         self.flying = False
-
-

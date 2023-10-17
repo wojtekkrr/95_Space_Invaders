@@ -1,5 +1,5 @@
 from alien import Turtle
-from colors import COLORS, COLORS_BOXES
+from colors import COLORS_BOXES
 from random import randint
 
 

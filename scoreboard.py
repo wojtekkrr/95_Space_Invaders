@@ -1,12 +1,12 @@
 from turtle import Turtle
-from colors import COLORS, COLORS_BOXES
+from colors import COLORS
 
 
 class Scoreboard(Turtle):
 
     def __init__(self):
         super().__init__()
-        self.color(COLORS[2])
+        self.color(COLORS[1])
         self.penup()
         self.hideturtle()
         self.score = 0
