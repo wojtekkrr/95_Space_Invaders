@@ -1,17 +1,19 @@
 from turtle import Turtle
-from colors import COLORS
+from colors import COLORS, COLORS_BOXES
 
 class Alien(Turtle):
 
     def __init__(self, position):
         super().__init__()
         self.shape("turtle")
-        self.color(COLORS[4])
+        self.color(COLORS[1])
         self.shapesize(stretch_wid=1, stretch_len=1)
         self.penup()
         self.goto(position)
         self.setheading(-90)
         self.direction = 1
+        self.towards_player_dist = 20
+        self.alien_shot = False
 
     # Usunięcie obiektu alien z widoku
     def destroy_alien(self):
@@ -29,4 +31,10 @@ class Alien(Turtle):
 # Usuwanie obiektu alien
     def kill_alien(self):
         self.goto(self.xcor(), 10000)
+        self.alien_shot = True
+
+# Przybliż się
+    def move_towards_player(self):
+        new_y = self.ycor() - self.towards_player_dist
+        self.goto(self.xcor(), new_y)
 

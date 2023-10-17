@@ -1,12 +1,12 @@
 from alien import Turtle
-from colors import COLORS
+from colors import COLORS, COLORS_BOXES
 
 class Paddle(Turtle):
 
     def __init__(self, position):
         super().__init__()
         self.shape("triangle")
-        self.color(COLORS[0])
+        self.color(COLORS[2])
         self.shapesize(stretch_wid=1, stretch_len=1)
         self.penup()
         self.goto(position)
